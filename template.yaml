@@ -426,6 +426,7 @@ Resources:
       Environment:
         Variables:
           QUEUE_NAME: !GetAtt OrderQueue.QueueName
+          SNS_ARN: !GetAtt SNSTopic.TopicArn
       Events:
         ConfirmUser:
           Type: Api
